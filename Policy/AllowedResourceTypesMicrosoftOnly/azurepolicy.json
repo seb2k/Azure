@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "displayName": "Allowed resource types (Microsoft Services only)",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "This policy allows only resources of type \"Microsoft\" to be deployed.",
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "not": {
+          "field": "type",
+          "like": "Microsoft.*"
+        }
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}
