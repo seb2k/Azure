@@ -9,7 +9,7 @@ This policy allows only resources of type "Microsoft.*" to be deployed
 ## Try with PowerShell
 
 ````powershell
-$definition = New-AzPolicyDefinition -Name "AllowedResourceTypesMicrosoftOnly" -DisplayName "Allowed resource types (Microsoft Services only)" -description "This policy allows only resources of type "Microsoft.*" to be deployed" -Policy 'https://raw.githubusercontent.com/seb2k/Azure/Policy/Policy/AllowedResourceTypesMicrosoftOnly/azurepolicy.rules.json' -Mode All
+$definition = New-AzPolicyDefinition -Name "AllowedResourceTypesMicrosoftOnly" -DisplayName "Allowed resource types (Microsoft Services only)" -description 'This policy allows only resources of type "Microsoft.*" to be deployed' -Policy 'https://raw.githubusercontent.com/seb2k/Azure/Policy/Policy/AllowedResourceTypesMicrosoftOnly/azurepolicy.rules.json' -Mode All
 $definition
 $assignment = New-AzPolicyAssignment -Name <assignmentname> -Scope <scope> -PolicyDefinition $definition
 $assignment 
