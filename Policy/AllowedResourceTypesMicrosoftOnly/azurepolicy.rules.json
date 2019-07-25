@@ -1,0 +1,11 @@
+{
+  "if": {
+    "not": {
+      "field": "type",
+      "like": "Microsoft.*"
+    }
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
